@@ -1,12 +1,15 @@
 <!doctype html>
 <html>
 <head>
-    <title>Our Funky HTML Page</title>
-    <meta name="description" content="Our first page">
-    <meta name="keywords" content="html tutorial template">
-    {% block head %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="CIFAR-10 image classification end-to-end">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-    {% block body %}{% endblock %}
+    {% block body %}
+    {% endblock %}
 </body>
 </html>

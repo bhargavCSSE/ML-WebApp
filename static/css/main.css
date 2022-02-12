@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.table-1 {
+    margin-left: auto;
+    margin-right:auto;
+    font-family: 'Times New Roman', Times, serif;
+}
