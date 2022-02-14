@@ -21,7 +21,6 @@ class image_database(db.Model):
 def index():
     if request.method == 'POST':
         image = request.form.to_dict()
-        print(type(image))
         new_image = image_database(Id=image['ID'], label=image['Label'])
 
         try:
@@ -29,14 +28,38 @@ def index():
             db.session.commit()
             return redirect("/")
         except:
-            return "Image upload error"
+            return "Error 1: Image upload error"
     
     else:
         images = image_database.query.order_by(image_database.date_created).all()
-        # images = image_database.order_by(image_database.date_created).first() # for recent one
         return render_template('index.html', images=images)
-    
-    
+
+@app.route('/delete/<int:Id>')
+def delete(Id):
+    image_to_delete = image_database.query.get_or_404(Id)
+
+    try:
+        db.session.delete(image_to_delete)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return "Error 2: Image delete error"
+
+@app.route('/update/<int:Id>', methods=['GET', 'POST'])
+def update(Id):
+    image = image_database.query.get_or_404(Id)
+
+    if request.method == 'POST':
+        image.Id = request.form['ID']
+        image.label = request.form['Label']
+
+        try:
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "Error-3: Image update error"
+    else:
+        return render_template('update.html', image=image)
 
 if __name__ == "__main__":
     app.run(debug=True)
