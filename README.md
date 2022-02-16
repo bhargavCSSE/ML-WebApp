@@ -6,4 +6,13 @@ End-to-end implementation of ML project
   - Django
   - Rest API
 2. Node.js
-3. React
+  - webpack
+  - webpack-cli
+  - babel/core
+  - babel-loader
+  - babel/preset-env
+  - babel/preset-react
+  - babel-plugin-transform-class-properties
+  - react
+  - react-dom
+  - prop-types
