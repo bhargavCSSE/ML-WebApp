@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./leadmanager/frontend/src/index.js --output-path ./leadmanager/frontend/static/frontend",
-    "build": "webpack --mode production ./leadmanager/frontend/src/index.js --output-path ./leadmanager/frontend/static/frontend"
+    "dev": "webpack --mode development --watch ./ML-WebApp/frontend/src/index.js --output-path ./ML-WebApp/frontend/static/frontend",
+    "build": "webpack --mode production ./ML-WebApp/frontend/src/index.js --output-path ./ML-WebApp/frontend/static/frontend"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +24,11 @@
     "axios": "^0.26.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
+    "react-transition-group": "^4.4.2",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1"

@@ -26,3 +26,6 @@ End-to-end implementation of ML project
 - redux-thunk
 - @redux-devtools/extension
 - axios
+- react-alert
+- react-alert-template-basic
+- react-transition-group
